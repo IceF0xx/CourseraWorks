@@ -8,7 +8,7 @@ int sample()
     int _int = 20;
     int negative_int = -10;
     double _double = 123.5467;
-    float zero_float = 10;
+    float zero_float = 100;
  
 //======== работаем с выравниванием ========\\
     
