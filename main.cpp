@@ -1,4 +1,3 @@
-#include "Testing Framework.h"
 #include <sstream>
 #include <iostream>
 #include <string>
@@ -6,6 +5,8 @@
 #include <map>
 #include <set>
 using namespace std;
+
+#include "Testing Framework.h"
 
 
 void Test1()
