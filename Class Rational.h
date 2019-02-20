@@ -24,7 +24,7 @@ public:
     }
 
     int Numerator() const {
-        return up;
+        return  up;
     }
 
     int Denominator() const {

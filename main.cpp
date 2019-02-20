@@ -1,5 +1,4 @@
 #include <sstream>
-#include <exception>
 #include <iostream>
 #include <string>
 #include <map>
@@ -11,7 +10,7 @@ using namespace std;
 
 void Test1()
 {
-    AssertEqual(2,1+1,"1");
+    AssertEqual(2,11,"1");
 }
 void TestAll()
 {
