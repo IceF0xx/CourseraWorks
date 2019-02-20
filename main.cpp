@@ -1,6 +1,7 @@
 #include <sstream>
 #include <iostream>
 #include <string>
+#include <cmath>
 #include <map>
 #include <set>
 using namespace std;
@@ -10,7 +11,7 @@ using namespace std;
 
 void Test1()
 {
-    AssertEqual(2,4-2,"2");
+    AssertEqual(2,sqrt(4),"2");
 }
 void TestAll()
 {
