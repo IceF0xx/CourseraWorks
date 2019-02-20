@@ -1,3 +1,4 @@
+#include "Testing Framework.h"
 #include <sstream>
 #include <iostream>
 #include <string>
@@ -6,11 +7,10 @@
 #include <set>
 using namespace std;
 
-#include "Testing Framework.h"
 
 void Test1()
 {
-    AssertEqual(2,sqrt(15),"2");
+    AssertEqual(2,21,"2");
 }
 void TestAll()
 {

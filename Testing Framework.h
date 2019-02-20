@@ -1,8 +1,11 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include <map>
 #include <set>
+#include <sstream>
 
+using namespace std;
 class TestRunner {
 public:
     template <class TestFunc>
