@@ -7,7 +7,6 @@
 using namespace std;
 
 #include "Testing Framework.h"
-#include "Class Rational.h"
 
 void Test1()
 {
