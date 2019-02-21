@@ -8,7 +8,6 @@ using namespace std;
 
 #include "Testing Framework.h"
 
-
 void Test1()
 {
     AssertEqual(2,21,"2");
