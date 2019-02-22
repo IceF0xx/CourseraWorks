@@ -3,4 +3,4 @@ project(CourseraWorks)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(CourseraWorks main.cpp "Format samples.cpp" "Testing Framework.h" "Class Rational.h" "Class Person.h" "Class Matrix.h")
+add_executable(CourseraWorks main.cpp "Format samples.cpp" "Testing Framework/Testing Framework.h" "Class Rational/Class Rational.h" "Class Person.h" "Class Matrix.h" "Testing Framework/Testing Framework.cpp" "Class Rational/Class Rational.cpp" "Class Matrix.cpp")

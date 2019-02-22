@@ -4,6 +4,7 @@
 #include <map>
 #include <set>
 #include <sstream>
+using namespace std;
 
 template<class T, class U>
 void AssertEqual(const T& t, const U& u,
@@ -41,13 +42,7 @@ void TestRunner::RunTest(TestFunc func, const string& test_name)
         cerr << test_name << " failed => " << e.what() << endl;
     }
 }
-TestRunner::~TestRunner()
-{
-    if (fail_count > 0) {
-        cerr << "In UNIT-test was found " << fail_count << (fail_count > 1 ? " errors" : " error") << endl;
-        exit(1);
-    }
-}
+
 
 template <typename K, typename V>
 ostream& operator<< (ostream& out, map<K,V> m)
@@ -99,6 +94,3 @@ void AssertEqual(const T& t, const U& u,
     }
 }
 
-void Assert(bool b, const string& hint) {
-    AssertEqual(b, true, hint);
-}
