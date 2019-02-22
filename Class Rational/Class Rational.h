@@ -7,45 +7,39 @@
 
 using namespace std;
 
+
 class Rational {
 public:
-    Rational() {
-        up = 0;
-        down = 1;
-    }
+    Rational();
 
-    Rational(int numerator, int denominator) {
-        if (denominator < 0)
-        {
-            up = - numerator / NOD(numerator,denominator);
-            down = abs(denominator) / NOD(numerator,denominator);
-            return;
-        }
-        up = numerator / NOD(numerator,denominator);
-        down = denominator / NOD(numerator,denominator);
-    }
+    Rational(int numerator, int denominator);
 
-    int Numerator() const {
-        return  up;
-    }
+    int Numerator() const;
 
-    int Denominator() const {
-        return down;
-    }
+    int Denominator() const;
 
 private:
     int up;
     int down;
-
-    int NOD(int a, int b)
-    {
-        a = abs(a);
-        b = abs(b);
-        while (b) {
-            a %= b;
-            swap (a, b);
-        }
-        return a;
-    };
-
+    int NOD(int a, int b);
 };
+
+bool operator==(const Rational& rhs, const Rational& lhs);
+
+bool operator!=(const Rational& rhs, const Rational& lhs);
+
+Rational operator+(const Rational& rhs, const Rational& lhs);
+
+Rational operator-(const Rational& rhs, const Rational& lhs);
+
+Rational operator*(const Rational& rhs, const Rational& lhs);
+
+Rational operator/(const Rational& rhs, const Rational& lhs);
+
+ostream& operator<<(ostream& stream, const Rational& rhs);
+
+istream& operator>>(istream& stream, Rational& rhs);
+
+bool operator>(const Rational& rhs, const Rational& lhs);
+
+bool operator<(const Rational& rhs, const Rational& lhs);
