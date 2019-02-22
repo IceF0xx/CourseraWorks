@@ -10,7 +10,7 @@ using namespace std;
 
 void Test1()
 {
-    AssertEqual(2,21,"2");
+    AssertEqual(2,2,"2");
 }
 void TestAll()
 {
