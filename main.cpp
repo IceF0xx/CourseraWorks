@@ -7,6 +7,7 @@
 using namespace std;
 
 #include "Testing Framework/Testing Framework.h"
+#include "Class Rational/Class Rational.h"
 
 void Test1()
 {
@@ -22,4 +23,7 @@ int main()
 {
     ios::sync_with_stdio(false);
     TestAll();
+    int i = 0;
+    cout << (i |= true);
+
 }
