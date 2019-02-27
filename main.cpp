@@ -4,26 +4,57 @@
 #include <cmath>
 #include <map>
 #include <set>
+#include <vector>
+#include <algorithm>
+//#include "Testing Framework/Testing Framework.h"
 using namespace std;
 
-#include "Testing Framework/Testing Framework.h"
-#include "Class Rational/Class Rational.h"
+vector<string> SplitIntoWords(const string& s);
 
-void Test1()
+template <typename It>
+void PrintVector(It range_begin,
+                 It range_end)
 {
-    AssertEqual(2,2,"2");
+    for (auto it = --range_end; it >= range_begin; --it)
+    {
+        cout << *it << " ";
+    }
 }
-void TestAll()
+
+vector<string> SplitIntoWords(const string& s)
 {
-    TestRunner tr;
-    tr.RunTest(Test1,"T1");
+    string s1 = s;
+    vector<string> result;
+    while (!s1.empty())
+    {
+        string temp;
+        auto space = find(s1.begin(), s1.end(), ' ');
+        for (auto it = s1.begin(); it != space; ++it)
+        {
+            temp += *it;
+        }
+        result.push_back(temp);
+        if (space == s1.end())
+        {
+            break;
+        }
+        s1.erase(s1.begin(), ++space);
+
+    }
+    return result;
 }
 
-int main()
-{
-    ios::sync_with_stdio(false);
-    TestAll();
-    int i = 0;
-    cout << (i |= true);
+int main() {
+    string s = "C Cpp Java Python";
 
+    vector<string> words = SplitIntoWords(s);
+    cout << words.size() << " ";
+    for (auto it = begin(words); it != end(words); ++it) {
+        if (it != begin(words)) {
+            cout << "/";
+        }
+        cout << *it;
+    }
+    cout << endl;
+    return 0;
 }
