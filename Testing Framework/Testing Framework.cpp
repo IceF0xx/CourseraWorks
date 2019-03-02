@@ -4,7 +4,7 @@
 TestRunner::~TestRunner()
 {
     if (fail_count > 0) {
-        cerr << "In UNIT-test was found " << fail_count << (fail_count > 1 ? " errors" : " error") << endl;
+        cerr << "In UNIT-test " << (fail_count > 1 ? "were" : "was") << " found " << fail_count << (fail_count > 1 ? " errors" : " error") << endl;
         exit(1);
     }
 }
