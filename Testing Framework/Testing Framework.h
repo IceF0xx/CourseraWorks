@@ -70,6 +70,7 @@ template <typename F>
 ostream& operator<< (ostream& out, vector<F> v)
 {
     bool first = true;
+    out << '(';
     for (const auto& w : v)
     {
         if (!first)
@@ -77,9 +78,9 @@ ostream& operator<< (ostream& out, vector<F> v)
             out << ", ";
         }
         first = false;
-        out << v;
+        out << w;
     }
-    return out;
+    return out << ')';
 }
 
 template<class T, class U>
