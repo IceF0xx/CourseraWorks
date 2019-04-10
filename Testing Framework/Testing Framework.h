@@ -4,7 +4,13 @@
 #include <map>
 #include <set>
 #include <sstream>
+
+#define RUN_TEST(tr, func) \
+    tr.RunTest(func, #func)
+
 using namespace std;
+
+
 
 template<class T, class U>
 void AssertEqual(const T& t, const U& u,
@@ -68,6 +74,23 @@ ostream& operator<< (ostream& out, pair<K,V> p)
 
 template <typename F>
 ostream& operator<< (ostream& out, vector<F> v)
+{
+    bool first = true;
+    out << '(';
+    for (const auto& w : v)
+    {
+        if (!first)
+        {
+            out << ", ";
+        }
+        first = false;
+        out << w;
+    }
+    return out << ')';
+}
+
+template <typename F>
+ostream& operator<< (ostream& out, set<F> v)
 {
     bool first = true;
     out << '(';

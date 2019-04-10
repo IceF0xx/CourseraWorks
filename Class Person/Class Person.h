@@ -4,6 +4,7 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <iterator>
 #include <map>
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
     };
     map <int, Fullname> Total;
 public:
+    Person(){};
     Person (const string& name, const string& soname, const int& year)
     {
         Total[year].Name = name;

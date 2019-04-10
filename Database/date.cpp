@@ -1,6 +1,7 @@
 #include "date.h"
 
 #include <iomanip>
+#include <sstream>
 
 Date :: Date(const int& year, const int& month, const int& day)
         : date_({static_cast<int16_t>(year),
