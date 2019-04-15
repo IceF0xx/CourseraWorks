@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Testing Framework.h"
 TestRunner::~TestRunner()
 {
